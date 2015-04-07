@@ -23,6 +23,7 @@ gulp.task("build", function () {
 		"src/js/vendor/jquery.mousewheel.min.js",
 		"src/js/vendor/lodash.js",
 		"src/js/vendor/machina.min.js",
+		"src/js/vendor/perfect-scrollbar.jquery.min.js",
 		"src/js/utils.js",
 		"src/js/timeline.js",
 		"src/js/pane.js",

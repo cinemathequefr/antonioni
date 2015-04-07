@@ -119,8 +119,8 @@ em > em {
   font-size: 4rem; line-height: 4rem;
 }
 
-.prev { left: 0; padding: 0 0 0 26px; }
-.next { right: 0; padding:  0 26px 0 0; }
+.prev { left: 26px; padding: 0; }
+.next { right: 26px; padding: 0; }
 
 .close {
   position: absolute;
