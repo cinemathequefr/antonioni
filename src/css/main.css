@@ -1,0 +1,222 @@
+html {
+  font-size: 100%;
+  heigth: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background-color: #666; color: #444;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+}
+
+a.logocf {
+  position: fixed; display: block;
+  bottom: 12px; right: 12px;
+  width: 110px; height: 50px;
+  background-image: url(img/logocf.png);
+  text-decoration: none; color: inherit;
+  outline: none;
+}
+
+em > em {
+  font-style: normal;  
+}
+
+
+.tooltip {
+  display: block;
+  min-width: 120px; max-width: 200px;
+  padding-top: 11px;
+  background-image: url(img/caret-up.png); background-repeat: no-repeat; background-position: 50% 0;
+}
+
+.tooltip > div {
+  background-color: #000; color: #eee;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;  
+  text-align: center;
+  border-radius: 3px;
+}
+
+.intro {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #fff; color: #111;
+  background-image: url(img/antonioni4.jpg);
+  background-repeat: no-repeat; background-position: 50% 100%; background-size: cover;
+}
+
+.credits {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  padding: 48px 48px 48px 128px;
+  background-color: #fff; color: #111;
+}
+
+.preloadContainer {
+  position: fixed; overflow: hidden;
+  left: 50%; top: 50%;
+  width: 500px; height: 218px;
+  margin-left: -250px;
+  text-align: center;
+}
+
+.preloadProgress {
+  position: relative;
+  width: 500px; height: 142px;
+  background-image: url(img/loader500.png); background-repeat: no-repeat; background-position: 0 0;
+}
+
+.preloadProgress > .preloadProgressImg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 142px;
+  background-image: url(img/loader500.png); background-repeat: no-repeat; background-position: -500px 0;
+}
+
+.preloadInfo {
+  position: absolute; overflow: hidden;
+  bottom: 0; width: 100%;
+  line-height: 64px; height: 64px;
+}
+
+.preloadPercent {
+  position: absolute;
+  width: 100%; top: 0;
+  transition-duration: 1s;
+}
+
+.preloadPercent.loaded {
+  top: -64px;
+}
+
+.percent {
+  font-size: 1.25rem; font-weight: 600;
+}
+
+.enter {
+  font-size: 64px;
+  cursor: pointer;
+  transition-duration: 0.35s;
+}
+
+.enter:hover, .enter.active {
+  color: #2ac;
+  opacity: 0.8; filter: alpha(opacity=80);
+}
+
+.prev, .next, .close {
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.35s;
+}
+
+.prev, .next {
+  position: fixed;
+  bottom: 50%; width: 60px;
+  color: #ddd;
+  font-size: 4rem; line-height: 4rem;
+}
+
+.prev { left: 0; padding: 0 0 0 26px; }
+.next { right: 0; padding:  0 26px 0 0; }
+
+.close {
+  position: absolute;
+  top: 24px; right: 24px;
+  width: 36px; height: 36px; line-height: 36px;
+  background-color: #ddd; color: #fff;
+  font-size: 24px;
+}
+
+.next.active, .next:hover, .prev.active, .prev:hover {
+  color: #2ac;
+  opacity: 0.9; filter: alpha(opacity=90);
+}
+
+.close.active, .close:hover { background-color: #2ac; }
+
+.prev:before { font-family: FontAwesome; content:"\f137"; }
+.next:before { font-family: FontAwesome; content:"\f138"; }
+.close:before { font-family: FontAwesome; content: '\f00d'; }
+.open:before { font-family: FontAwesome; content: '\f055'; }
+.open.active, .open:hover { color: #2ac; opacity: 0.9; filter: alpha(opacity=90); }
+
+.gaugeContainer {
+  position: fixed;
+  left: 0; bottom: 0; right: 0; height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gauge {
+  position: absolute;
+  height: 8px; bottom: 0; width: 0;
+  background-color: #f33;
+}
+
+.titleContainer {
+  position: fixed;
+  max-width: 40%;
+  top: 24px; left: 24px;
+}
+
+.title {
+  color: #fff;
+  font-family: Oswald; font-weight: 700; text-transform: uppercase;
+  font-size: 3.5rem;
+  text-align: left; text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.year {
+  font-size: 2.5rem;
+  line-height: 1.75rem;
+}
+
+.name {
+  cursor: pointer;
+  transition-duration: 0.35s;
+}
+
+.name:hover, .name.active { color: #2ac; }
+
+.frame {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  text-align: center; font-size: 3rem; color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.film {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; width: 50%;
+  padding: 72px 0 24px 24px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.film > .scrollable {
+  position: relative; overflow: hidden;
+  height: 100%;
+  padding-right: 128px;
+  color: #444;
+}
+
+/*
+.index {
+  position: fixed;
+  width: 120px;
+  bottom: 50%; left: 50%;
+  margin-left: -60px;
+  font-size:3rem;
+  text-align: center;
+  color: #ddd;
+  outline: solid 1px #ddd;
+}
+*/
